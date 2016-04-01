@@ -19,7 +19,7 @@
   <body>
     <header>
       <div class="inner">
-        <h2 align="center">Parallelizing Heat Method</h2>
+        <h1>Parallelizing the Heat Method</h1>
       </div>
     </header>
 
@@ -33,17 +33,25 @@
           <h3 class="octicon octicon-link">Background</h3>
             <p>
               The heat method is a new procedure for approximating the geodesic distance of two points, which is the shortest line that connects two points along a curved surface area. The heat method has shown to be simple, easy to implement, accurate, and most importantly it can be applied to virtually any geometric discretization such as grids and meshas. 
-
+              <br> <br>
               The simplicity of the method comes from the fact that it only requires a solution to two standard linear elliptic problems. Thus, to improve on the current implementation, we need to (I) construct the appropriate matrix for the different systems in parallel. (II) We need to implement a sparse linear solver. Note that the sparse linear solver must be able to deal with symmetric positive-definite systems.
             </p>
 
-            <img src="images/outline.png" alt="Outline" style="width:300px;height:300px;">
+            <img src="images/outline.PNG" alt="Outline">
           <h3 class="octicon octicon-link">The Challenge</h3>
 
           <h3 class="octicon octicon-link">Resources</h3>
-
+            We intend to build off of the current starter code which is completely sequential. The starter code is in C and we will continue to use C throughout the project. We plan on using OpenMP and Cuda to make the program parallel. 
+            <br> <br>
+            To gain more understanding in the domain, we plan on using a paper written by Keenan Crane. The paper essentially describes what the heat method is and how it can be implemented. A link to the paper is in the reference section. 
           <h3 class="octicon octicon-link">Platform Choice</h3>
-
+            <br>
+            <p> <b>Planned Goals</b> </p>
+            <ol>
+              <li> 
+                An OpenMP and Cuda 
+              </li>
+            </ol>
           <h3 class="octicon octicon-link">Schedule</h3>
         </section>
       </div>
