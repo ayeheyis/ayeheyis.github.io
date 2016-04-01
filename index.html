@@ -13,13 +13,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Project</title>
+    <title>Parallelizing Heat Method</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1 align="center">Project</h1>
+        <h2 align="center">Parallelizing Heat Method</h2>
       </div>
     </header>
 
@@ -27,9 +27,17 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h3 class="octicon octicon-link">Summary</h3>
-
+            <p> 
+              We are going to parallelize the computation of geodesic distance between points using the heat method, expanding upon a sequential solution. The focus will be on parallelizing the method for solving linear equations and the computations made to normalize the gradient. To accomplish this, we will use a lab machine with a quality GPU and CPU such as ghc41 or latedays.
+            </p>
           <h3 class="octicon octicon-link">Background</h3>
+            <p>
+              The heat method is a new procedure for approximating the geodesic distance of two points, which is the shortest line that connects two points along a curved surface area. The heat method has shown to be simple, easy to implement, accurate, and most importantly it can be applied to virtually any geometric discretization such as grids and meshas. 
 
+              The simplicity of the method comes from the fact that it only requires a solution to two standard linear elliptic problems. Thus, to improve on the current implementation, we need to (I) construct the appropriate matrix for the different systems in parallel. (II) We need to implement a sparse linear solver. Note that the sparse linear solver must be able to deal with symmetric positive-definite systems.
+            </p>
+
+            <img src="img/outline.png" alt="Outline" style="width:300px;height:300px;">
           <h3 class="octicon octicon-link">The Challenge</h3>
 
           <h3 class="octicon octicon-link">Resources</h3>
