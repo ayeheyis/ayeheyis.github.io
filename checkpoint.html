@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Parallelizing Heat Method</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Parallelizing the Heat Method</h1>
+        <a href="checkpoint.html">Proposal</a>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3 class="octicon octicon-link" color="white"><a href="index.html" align="center">Proposal  </a></h3>
+
+          <h3 class="octicon octicon-link">Revised Schedule</h3>
+          <p>
+          <ul>
+              <li> Milestone 1(April 22nd): Finish gradient normalization</li>
+              <li> Milestone 2(April 26th): Have a working simple parallelized linear solver</li>
+              <li> Milestone 3(May 3rd): Optimize linear solver</li>
+              <li> Milestone 4(May 9th): Finish up all of coding and work on write up/presentation
+</li>
+        </ul>
+        </p>
+
+          <h3 class="octicon octicon-link">Progress</h3>
+            <p>
+              We have kept mostly up to schedule so far. We first read the research paper outlining the heat method for calculating geodesic distance. Then we spent time understanding the starter code which has a sequential implementation of the heat method. At this point we had a decent idea of where and how we wanted to parallelize matrix construction and gradient normalization, but had yet to dive into the hardest part of the project: implementing a parallel linear solver. We finished the matrix construction and we also finished the gradient normalization, albeit with a few small bugs we are currently dealing with. Meanwhile, we have also been looking into how to approach the main task of creating a parallel sparse linear solver (for symmetric positive-definite systems). We have been learning from a research paper that discusses a parallel iterative solution method for this and plan to begin implementation as soon as we fix the bugs. <br>
+              <br>
+              All in all, we are mostly on track, save the bugs we are currently fixing. The nice to haves are looking like a long shot but the deliverables/final goals are still attainable and will stay the same. 
+            </p>
+          <h3 class="octicon octicon-link">Results</h3>
+
+          <p>
+            We don’t have any preliminary results because the main bottleneck is still in place and we are still touching up on small bugs in the task of normalizing the gradient.
+          </p>
+            
+          <h3 class="octicon octicon-link">Demo</h3>
+
+          <p> 
+            For the demo, we plan on showing graphs on the speedup achieved from our implementation relative to the provided sequential implementation. We will go into depth on how the different areas of the algorithm we parallelized affected the speedup of the program. 
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
